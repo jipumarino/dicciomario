@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Dicciomario</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+
+<h1>Dicciomario</h1>
+Una iniciativa en pos de la <a>vocularibilidad</a> de Mario
+<br />
+<br />
+<br />
+<table style="border-style:solid">
+
+<tr><th>Mario</th><th width="10px"></th><th>Resto del mundo </th></tr>
+<% @diccionario.each do |x,y| %>
+<tr><td><%= x %></td><td></td><td><%= y %></td></tr>
+<% end %>
+</table>
+
+<h2>En Vim:</h2>
+
+<pre><% @diccionario.each do |x,y| %>:%s/<%= x %>/<%= y %>/g
+<% end %></pre>
+
+<hr />
+<%= rand(1000000)+2000000 %> visitas.
+<br />
+Powered by <a href="http://elgoog.rb-hosting.de/index.cgi">Google</a>.
+</body>
+</html>
